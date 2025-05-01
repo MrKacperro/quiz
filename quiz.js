@@ -119,11 +119,3 @@
   // Przypięcie przycisków
   document.getElementById("przycisk-start").onclick = rozpocznijQuiz;
   document.getElementById("przycisk-reset").onclick = resetQuiz;
-  
-  window.addEventListener("load", () => {
-    const ekran = document.getElementById("loading-screen");
-    if (ekran) {
-      ekran.style.display = "none";
-    }
-  });
-  

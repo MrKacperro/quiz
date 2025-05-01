@@ -248,5 +248,10 @@ const pytania = [
         pytanie: "Czym jest malware?",
         odpowiedzi: ["Złośliwym oprogramowaniem", "Sterownikiem", "Rodzajem języka", "Formatem pliku"],
         poprawna: 0
+    },
+    {
+    pytanie: "Czy to jest pytanie?",
+    odpowiedzi: ["Tak", "Nie", "Chyba", "Nie wiem"],
+    poprawna: 0
     }
 ]

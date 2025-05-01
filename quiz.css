@@ -1,57 +1,97 @@
-/* ========== RESET + PODSTAWOWE USTAWIENIA ========== */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Żeby padding i border nie rozszerzały elementu */
+  box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
 
+/* ========== BODY ========== */
 body {
-  background-color: #2c3e50; /* Ciemne tło dla kontrastu */
-  color: white;              /* Jasny tekst */
+  background-color: #b6dbff;
+  color: white;
+  min-height: 100vh;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;         /* Minimum cały ekran */
-  padding: 20px;             /* Oddech */
 }
 
-/* ========== GŁÓWNY KONTENER QUIZU ========== */
+/* ========== KONTEJNER QUIZU ========== */
 .quiz-kontener {
   background-color: #34495e;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 800px;
-  padding: 30px;
+  max-width: 600px;
+  padding: 20px;
 }
 
 /* ========== NAGŁÓWEK ========== */
 header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 header h1 {
-  font-size: 24px;
+  font-size: 22px;
+  text-align: center;
 }
 
-/* Kontener z wynikiem */
+#numer-pytania {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .wynik-kontener {
   background-color: #34678a;
-  color: white;
-  padding: 8px 15px;
+  padding: 5px 12px;
   border-radius: 20px;
   font-weight: bold;
 }
 
-/* ========== MAIN ========== */
+/* ========== START, PYTANIA, WYNIKI ========== */
 main {
-  min-height: 300px;
+  text-align: center;
+}
+
+#start-sekcja,
+#pytanie-sekcja,
+#result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#pytanie-tekst {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#odpowiedź-kontener {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#odpowiedź-kontener button {
+  padding: 12px;
+  background-color: #34678a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#odpowiedź-kontener button:hover {
+  background-color: #1abc9c;
+  transform: scale(1.03);
 }
 
 /* ========== PRZYCISKI ========== */
@@ -59,99 +99,27 @@ main {
   background-color: #e67e22;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 12px;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  font-size: 18px;
-  margin-top: 20px;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
   background-color: #d35400;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* ========== KLASA UKRYWAJĄCA ELEMENTY ========== */
-.ukryte {
-  display: none;
-}
-
-/* KLASA WYMUSZAJĄCA WIDOCZNOŚĆ */
-.widoczna {
-  display: flex !important;
-}
-
-/* ========== SEKCJA PYTANIA ========== */
-#pytanie-sekcja {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Kontener odpowiedzi (przyciski) */
-#odpowiedź-kontener {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 20px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#odpowiedź-kontener button {
-  padding: 15px;
-  background-color: #34678a;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-#odpowiedź-kontener button:hover {
-  background-color: #1abc9c;
-  transform: scale(1.05);
-}
-
-/* ========== PRZYCISK "KOLEJNE PYTANIE" ========== */
 #kolejne-pytanie-btn {
-  background-color: #34678a;
-}
-
-#kolejne-pytanie-btn:hover {
   background-color: #2980b9;
 }
 
-/* ========== SEKCJA WYNIKU KOŃCOWEGO ========== */
-#result-section {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 25vh;
-  text-align: center;
+#kolejne-pytanie-btn:hover {
+  background-color: #1f6aa3;
 }
 
-/* ========== WYŚWIETLANIE NUMERU PYTANIA ========== */
-#numer-pytania {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 10px;
-}
-
-/* ========== SEKCJA STARTOWA ========== */
-#start-sekcja {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* ========== EKRAN ŁADOWANIA ========== */
+/* ========== ŁADOWANIE ========== */
 #loading-screen {
   position: fixed;
   top: 0;
@@ -161,7 +129,7 @@ main {
   background-color: #111;
   color: #fff;
   font-family: sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,13 +138,13 @@ main {
 }
 
 .loader {
-  border: 8px solid #444;
-  border-top: 8px solid #2ecc71;
+  border: 6px solid #444;
+  border-top: 6px solid #2ecc71;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   animation: spin 1s linear infinite;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 @keyframes spin {
@@ -184,56 +152,42 @@ main {
   100% { transform: rotate(360deg); }
 }
 
-/* ========== MEDIA QUERIES – RESPONSYWNOŚĆ ========== */
-@media (max-width: 768px) {
-  .quiz-kontener {
-    padding: 20px;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #numer-pytania {
-    margin-left: 0;
-    margin-top: 10px;
-    text-align: left;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  #odpowiedź-kontener button {
-    width: 100%;
-  }
+/* ========== KLASY STANÓW ========== */
+.ukryte {
+  display: none !important;
 }
 
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
+.widoczna {
+  display: flex !important;
+}
 
-  .quiz-kontener {
-    padding: 15px;
+/* ========== DLA WIĘKSZYCH EKRANÓW (DESKTOP) ========== */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   header h1 {
-    font-size: 20px;
+    font-size: 26px;
   }
 
   #numer-pytania {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .btn {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 12px 20px;
   }
 
   #odpowiedź-kontener button {
-    font-size: 16px;
-    padding: 12px;
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  #pytanie-tekst {
+    font-size: 20px;
   }
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./quiz.css">
+    <script src="./pytania.js" defer></script>
+    <script src="./quiz.js" defer></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Ładowanie quizu...</p>
+      </div>
+      
+    <div class="quiz-kontener">
+        <!-- Nagłówek quizu -->
+        <header>
+            <h1>Quiz</h1>
+            <h3 id="numer-pytania" class="ukryte">Pytanie</h3>
+            <div id="wynik-kontener" class="wynik-kontener ukryte">
+                Punkty: <span id="wynik">0</span><span>/10</span>
+            </div>
+        </header>
+
+        <!-- Sekcja z pytaniem -->
+        <main>
+            <section id="pytanie-sekcja" class="ukryte">
+                <h2 id="pytanie-tekst"></h2>
+                <div id="odpowiedź-kontener"></div>
+                <button id="kolejne-pytanie-btn" class="btn ukryte">Następne pytanie</button>
+            </section>
+
+            <!-- Sekcja startowa -->
+            <section id="start-sekcja">
+                <p>Witaj w quizie! Odpowiedz na 10 losowych pytań  o tematyce IT i sprawdź swoją wiedzę.</p>
+                <button id="przycisk-start" class="btn">Rozpocznij quiz</button>
+            </section>
+
+            <!-- Sekcja wyniku końcowego -->
+            <section id="result-section" class="ukryte">
+                <h2>Twój wynik</h2>
+                <p id="wynik-koncowy"></p>
+                <p id="wiadomosc-wyniku"></p>
+                <button id="przycisk-reset" class="btn">Zagraj jeszcze raz</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

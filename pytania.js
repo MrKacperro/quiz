@@ -249,9 +249,120 @@ const pytania = [
         odpowiedzi: ["Złośliwym oprogramowaniem", "Sterownikiem", "Rodzajem języka", "Formatem pliku"],
         poprawna: 0
     },
+//###################################################################################
+//###################################################################################
+//##                                                                               ##
+//##                                                                               ##
+//##    ________   ______     __    __   ______        __      _    _____          ##
+//##    (___  ___) (   __ \    ) )  ( (  (_  __ \      /  \    / )  / ___/         ##
+//##        ) )     ) (__) )  ( (    ) )   ) ) \ \    / /\ \  / /  ( (__           ##
+//##       ( (     (    __/    ) )  ( (   ( (   ) )   ) ) ) ) ) )   ) __)          ##
+//##        ) )     ) \ \  _  ( (    ) )   ) )  ) )  ( ( ( ( ( (   ( (             ##
+//##       ( (     ( ( \ \_))  ) \__/ (   / /__/ /   / /  \ \/ /    \ \___         ##
+//##       /__\     )_) \__/   \______/  (______/   (_/    \__/      \____\        ##
+//##                                                                               ##
+//##                                                                               ##
+//##                                                                               ##
+//###################################################################################
+//###################################################################################                                                                                                                             
     {
-    pytanie: "Czy to jest pytanie?",
-    odpowiedzi: ["Tak", "Nie", "Chyba", "Nie wiem"],
-    poprawna: 0
+        pytanie: "Czym różni się TCP od UDP w praktycznym zastosowaniu?",
+        odpowiedzi: ["TCP zapewnia niezawodność, UDP jest szybszy, ale bez gwarancji dostarczenia", "UDP jest bezpieczniejszy od TCP", "TCP nie używa portów", "UDP zawsze szyfruje dane"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Co to jest 'race condition' w programowaniu współbieżnym?",
+        odpowiedzi: ["Błąd wynikający z nieprzewidywalnej kolejności wykonania wątków", "Sytuacja, gdy proces nie kończy się", "Specjalna optymalizacja kodu", "Zabezpieczenie przed deadlockiem"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Który algorytm ma najlepszą średnią złożoność czasową w sortowaniu?",
+        odpowiedzi: ["Merge sort", "Bubble sort", "Insertion sort", "Selection sort"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym jest 'memoizacja' w kontekście funkcji rekurencyjnych?",
+        odpowiedzi: ["Techniką zapamiętywania wyników funkcji, by nie liczyć ich ponownie", "Rodzajem optymalizacji pamięci RAM", "Systemem wersjonowania funkcji", "Sposobem na sortowanie danych"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Co robi 'fork()' w systemie Unix/Linux?",
+        odpowiedzi: ["Tworzy nowy proces będący kopią bieżącego", "Tworzy nowy wątek", "Zamyka bieżący proces", "Zamyka deskryptor pliku"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Jakie jest domyślne TTL (Time To Live) dla pakietów IP?",
+        odpowiedzi: ["64", "128", "255", "32"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym różni się kodowanie Base64 od haszowania SHA-256?",
+        odpowiedzi: ["Base64 to kodowanie, a SHA-256 to haszowanie – Base64 można odkodować, SHA-256 nie", "SHA-256 to metoda szyfrowania, Base64 to haszowanie", "Base64 jest szybsze i bezpieczniejsze niż SHA-256", "SHA-256 kompresuje dane, Base64 nie"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Co to jest 'lazy loading' w programowaniu webowym?",
+        odpowiedzi: ["Technika ładowania zasobów dopiero wtedy, gdy są potrzebne", "Sposób pisania mniej kodu", "Rodzaj CSS", "Rodzaj bazy danych"],
+        poprawna: 0
+    },
+    {
+        pytanie: "W języku C++, czym jest 'RAII'?",
+        odpowiedzi: ["Techniką zarządzania zasobami za pomocą obiektów", "Rodzajem wyjątku", "Biblioteką do grafiki", "Standardem szyfrowania"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Jaka jest różnica między 'stack' a 'heap' w zarządzaniu pamięcią?",
+        odpowiedzi: ["Stack jest szybki i automatyczny, heap wymaga ręcznego zarządzania", "Heap jest używany tylko w Pythonie", "Stack to pamięć stała, heap to tymczasowa", "Heap nie używa wskaźników"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym jest XSS (Cross-site scripting)?",
+        odpowiedzi: ["Wstrzyknięciem złośliwego kodu JS do strony", "Rodzajem szyfrowania SSL", "Metodą brute-force", "Oprogramowaniem do backupu"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Która z poniższych struktur danych jest najlepsza do implementacji kolejki priorytetowej?",
+        odpowiedzi: ["Kopiec binarny (heap)", "Stos", "Lista dwukierunkowa", "Tablica dynamiczna"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym jest LRU cache?",
+        odpowiedzi: ["Mechanizmem usuwającym najmniej używane dane z pamięci", "Typem systemu plików", "Metodą szyfrowania", "Zamiennikiem CPU"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Jak działa protokół OAuth 2.0?",
+        odpowiedzi: ["Pozwala na autoryzację bez udostępniania hasła aplikacjom trzecim", "Służy do szyfrowania połączeń", "Umożliwia dostęp offline do serwera", "Pozwala zapisywać hasła lokalnie"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym jest system plików ZFS?",
+        odpowiedzi: ["Zaawansowanym systemem plików z obsługą snapshotów i integralności danych", "Formatem zapisu obrazów", "Protokółem komunikacyjnym", "Rodzajem szyfrowania"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Który algorytm znajdowania najkrótszej ścieżki działa na grafie z wagami ujemnymi?",
+        odpowiedzi: ["Bellman-Ford", "Dijkstra", "A*", "Kruskal"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Do czego służy wskaźnik 'void*' w języku C?",
+        odpowiedzi: ["Do przechowywania adresu dowolnego typu danych", "Do wskazywania na NULL", "Jest to specjalny typ zmiennej globalnej", "Nie istnieje taki wskaźnik w C"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym jest atak typu 'man-in-the-middle'?",
+        odpowiedzi: ["Podsłuchiwaniem i modyfikacją danych przesyłanych między dwiema stronami", "Zainfekowaniem systemu trojanem", "Użyciem złośliwego makra", "Włamaniem do BIOSu"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym różni się Docker od maszyny wirtualnej?",
+        odpowiedzi: ["Docker działa na poziomie systemu operacyjnego, VM emuluje cały sprzęt", "Docker wymaga więcej zasobów", "Docker nie obsługuje systemu plików", "VM działa tylko na Linuksie"],
+        poprawna: 0
+    },
+    {
+        pytanie: "Czym jest wskaźnik typu 'smart pointer' w C++?",
+        odpowiedzi: ["Wskaźnikiem zarządzającym pamięcią automatycznie", "Rodzajem iteratora", "Typem zmiennej globalnej", "Stałym wskaźnikiem do funkcji"],
+        poprawna: 0
     }
 ]

@@ -1,3 +1,4 @@
+/* Reset i styl podstawowy */
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +23,9 @@ body {
   width: 100%;
   max-width: 800px;
   padding: 30px;
-  
 }
 
+/* Nagłówek i wynik */
 header {
   display: flex;
   justify-content: space-between;
@@ -32,12 +33,10 @@ header {
   margin-bottom: 30px;
   padding-bottom: 15px;
   border-bottom: 1px solid #ddd;
-  
 }
 
 header h1 {
   font-size: 24px;
-  
 }
 
 .wynik-kontener {
@@ -48,10 +47,7 @@ header h1 {
   font-weight: bold;
 }
 
-main {
-  min-height: 300px;
-}
-
+/* Przycisk uniwersalny */
 .btn {
   background-color: #e67e22;
   color: white;
@@ -69,19 +65,33 @@ main {
   transform: scale(1.05);
 }
 
+/* Ukrywanie elementów */
 .ukryte {
-  display: none;
+  display: none !important;
 }
 
 .widoczna {
   display: flex !important;
 }
 
+/* Sekcja pytań */
 #pytanie-sekcja {
   margin-bottom: 20px;
   text-align: center;
 }
 
+#numer-pytania {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#pytanie-tekst {
+  margin-top: 10px;
+}
+
+/* Odpowiedzi */
 #odpowiedź-kontener {
   display: flex;
   flex-direction: column;
@@ -105,16 +115,16 @@ main {
   transform: scale(1.05);
 }
 
+/* Kolejne pytanie */
 #kolejne-pytanie-btn {
   background-color: #34678a;
-  
-  
 }
 
 #kolejne-pytanie-btn:hover {
   background-color: #2980b9;
 }
 
+/* Sekcja wynikowa */
 #result-section {
   display: none;
   flex-direction: column;
@@ -124,18 +134,60 @@ main {
   text-align: center;
 }
 
-#numer-pytania {
-  font-size: 19px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-#start-sekcja{
-
+/* Sekcja startowa */
+#start-sekcja {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* Wybór liczby pytań */
+#wybor-pytan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#wybor-pytan label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#ile-pytan {
+  display: block; /* Umożliwia wyśrodkowanie */
+  margin: 0 auto; /* Wyśrodkowanie w poziomie */
+  padding: 10px 15px; /* Wyrównanie tekstu w select */
+  font-size: 1rem; /* Ujednolicenie rozmiaru czcionki */
+  border-radius: 6px; /* Zaokrąglenie rogów */
+  border: 1px solid #ccc; /* Ramka wokół select */
+  background-color: #34495e; /* Kolor tła */
+  color: white; /* Kolor czcionki */
+  cursor: pointer;
+  text-align: center; /* Wyrównanie tekstu w select */
+  width: 100%; /* Zajmuje całą szerokość kontenera */
+  max-width: 250px; /* Maksymalna szerokość dla select */
+  box-sizing: border-box; /* Uwzględnia padding i border w szerokości */
+}
+
+#ile-pytan option {
+  padding: 12px 15px; /* Wyrównanie wysokości opcji */
+  font-size: 1rem; /* Ujednolicenie rozmiaru czcionki */
+  background-color: #34495e; /* Kolor tła opcji */
+  color: white; /* Kolor czcionki w opcjach */
+  text-align: center; /* Wyrównanie tekstu w opcjach */
+  white-space: nowrap; /* Zapewnia, że tekst nie będzie łamał się w opcji */
+}
+
+#ile-pytan:hover {
+  background-color: #2c3e50; /* Zmiana tła podczas najechania */
+}
+
+#ile-pytan option:hover {
+  background-color: #1abc9c; /* Zmiana tła podczas najechania na opcję */
 }

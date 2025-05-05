@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./quiz.css">
-    <script src="./pytania.js" defer></script>
-    <script src="./quiz.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="./quiz.css">
+  <script src="./pytania.js" defer></script>
+  <script src="./quiz.js" defer></script>
 </head>
 <body>
-    <div class="quiz-kontener">
-        <!-- Nagłówek quizu -->
-        <header>
-            <h1>Quiz</h1>
-            <div id="wynik-kontener" class="wynik-kontener ukryte">
-                Punkty: <span id="wynik">0</span><span>/10</span>
-            </div>
-        </header>
-
-        <!-- Sekcja z pytaniem -->
-        <main>
-            <section id="pytanie-sekcja" class="ukryte">
-                <div id="numer-pytania" class="ukryte">Pytanie</div>
-                <h2 id="pytanie-tekst"></h2>
-                <div id="odpowiedź-kontener"></div>
-                <button id="kolejne-pytanie-btn" class="btn ukryte">Następne pytanie</button>
-                
-            </section>
-
-            <!-- Sekcja startowa -->
-            <section id="start-sekcja">
-                <p>Witaj w quizie! Odpowiedz na 10 losowych pytań  o tematyce IT i sprawdź swoją wiedzę.</p>
-                <button id="przycisk-start" class="btn">Rozpocznij quiz</button>
-            </section>
-
-            <!-- Sekcja wyniku końcowego -->
-            <section id="result-section" class="ukryte">
-                <h2>Twój wynik</h2>
-                <p id="wynik-koncowy"></p>
-                <p id="wiadomosc-wyniku"></p>
-                <button id="przycisk-reset" class="btn">Zagraj jeszcze raz</button>
-                <div id="numer-pytania" class="ukryte">Pytanie</div>
-            </section>
-        </main>
-        
-        
-    </div>
+  <div class="quiz-kontener">
     
+    <!-- Górna część z nagłówkiem i wynikiem -->
+    <header>
+      <h1>Quiz</h1>
+      <div id="wynik-kontener" class="wynik-kontener ukryte">
+        Punkty: <span id="wynik">0</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sekcja z pytaniami (pokaże się po starcie quizu) -->
+      <section id="pytanie-sekcja" class="ukryte">
+        <div id="numer-pytania" class="ukryte">Pytanie</div> <!-- Numer aktualnego pytania -->
+        <h2 id="pytanie-tekst"></h2> <!-- Treść pytania -->
+        <div id="odpowiedź-kontener"></div> <!-- Kontener na przyciski odpowiedzi -->
+        <button id="kolejne-pytanie-btn" class="btn ukryte">Następne pytanie</button>
+      </section>
+
+      <!-- Sekcja początkowa (widoczna na start) -->
+      <section id="start-sekcja">
+        <p>Witaj w quizie! Odpowiedz na 10 losowych pytań o tematyce IT i sprawdź swoją wiedzę.</p><br><br><br>
+        <button id="przycisk-start" class="btn">Rozpocznij quiz</button>
+      </section>
+
+      <!-- Sekcja wyników końcowych -->
+      <section id="result-section" class="ukryte">
+        <h2>Twój wynik</h2>
+        <p id="wynik-koncowy"></p> <!-- Tekst z wynikiem np. "7 z 10" -->
+        <p id="wiadomosc-wyniku"></p> <!-- Tekst np. "Brawo!" lub "Możesz lepiej" -->
+        <button id="przycisk-reset" class="btn">Zagraj jeszcze raz</button>
+        <!-- USUNIĘTO DRUGI ID="numer-pytania", bo był duplikatem -->
+      </section>
+    </main>
+
+    <!-- Wybór liczby pytań przed rozpoczęciem quizu -->
+    <div id="wybor-pytan">
+      <label for="ile-pytan">Wybierz liczbę pytań:</label>
+      <select id="ile-pytan" class="btn" style="margin-top: 10px;">
+        <option value="10" selected>10 pytań</option>
+        <option value="15">15 pytań</option>
+        <option value="20">20 pytań</option>
+        <option value="25">25 pytań</option>
+        <option value="30">30 pytań</option>
+        <option value="35">35 pytań</option>
+        <option value="40">40 pytań</option>
+        <option value="45">45 pytań</option>
+        <option value="50">50 pytań</option>
+        <option value="100">💀Wszystkie💀</option>
+      </select>
+    </div>
+
+  </div>
 </body>
 </html>

@@ -122,3 +122,6 @@ function rozpocznijQuiz() {
 // Obsługa przycisków
 document.getElementById("przycisk-start").onclick = rozpocznijQuiz;
 document.getElementById("przycisk-reset").onclick = resetQuiz;
+
+
+// Własność Kacper Jasiński 3 Ti

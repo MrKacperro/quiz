@@ -617,3 +617,5 @@ poprawna: 0
     poprawna: 0
 },
 ];
+
+// Własność Kacper Jasiński 3 Ti

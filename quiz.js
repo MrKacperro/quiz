@@ -29,7 +29,7 @@ function wyswietlPytanie() {
   const pytanie = pytania[pytaniaLosowe[aktualnePytanie]];
   const numer = aktualnePytanie + 1;
 
-  document.getElementById("numer-pytania").textContent = `Pytanie ${numer} z ${liczbaPytan}`;
+  document.getElementById("numer-pytania").textContent = 'Pytanie ' + numer + ' z ' + liczbaPytan;
   document.getElementById("pytanie-tekst").textContent = pytanie.pytanie;
 
   const kontener = document.getElementById("odpowiedź-kontener");
@@ -85,9 +85,22 @@ function pokazWynik() {
   wynikSekcja.classList.remove("ukryte");
   wynikSekcja.classList.add("widoczna");
 
-  document.getElementById("wynik-koncowy").textContent = `Twój wynik: ${punkty} na ${liczbaPytan}`;
-  document.getElementById("wiadomosc-wyniku").textContent =
-    punkty >= 7 ? "Brawo, świetnie ci poszło!" : "Możesz to zrobić lepiej!";
+  const procent = (punkty / liczbaPytan) * 100;
+
+  document.getElementById("wynik-koncowy").textContent = 
+    'Twój wynik: ' + punkty + ' na ' + liczbaPytan + ' (' + procent.toFixed(1) + '%)';
+
+  let wiadomosc;
+
+  if (procent >= 70) {
+    wiadomosc = 'Brawo, świetnie ci poszło!';
+  } else if (procent >= 30) {
+    wiadomosc = 'Możesz to zrobić lepiej!';
+  } else {
+    wiadomosc = 'Przecież ty nic nie umiesz!';
+  }
+
+  document.getElementById("wiadomosc-wyniku").textContent = wiadomosc;
 }
 
 // Reset quizu
